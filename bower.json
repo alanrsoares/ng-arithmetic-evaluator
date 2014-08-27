@@ -1,0 +1,22 @@
+{
+  "name": "ng-arithmetic-evaluator",
+  "version": "0.0.1",
+  "authors": [
+    "Alan Soares <alans@olympic.co.nz>"
+  ],
+  "description": "Angular component for evaluating arithmetic expressions",
+  "main": "src/index.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.23",
+    "bootstrap": "~3.2.0"
+  }
+}
