@@ -1,23 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='evaluator'>
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap-theme.min.css"/>
 </head>
 <body>
-<div class='container' ng-app='evaluator'>
+<div class='container'>
     <div class='page-header'>
         <h1><span class='text-muted'>Simple</span> Arithmetic Expression Evaluator</h1>
     </div>
     <form name='evtForm' role="form" class='well' ng-controller='AppCtrl' action='#'>
-        <div class="form-group has-feedback" ng-class="{false: 'has-error', true:'has-success'}[evtForm.expression.$valid]">
+        <div class="form-group has-feedback"
+             ng-class="{false: 'has-error', true:'has-success'}[evtForm.expression.$valid]">
             <label class='control-label' for="expression">Expression</label>
-            <input id='expression' name='expression' class="form-control" ng-model='expression' ng-pattern='/(\d+(\.\d+)?)(\s+)?([\^*\/\+-])(\s+)?(\d+(\.\d+)?)/' required placeholder='enter expression' /> <span class="glyphicon glyphicon-ok form-control-feedback" ng-class="{true:'glyphicon-ok', false:'glyphicon-remove'}[evtForm.$valid]"></span>
+            <input id='expression' name='expression' class="form-control" ng-model='expression'
+                   ng-pattern='/(\d+(\.\d+)?)(\s+)?([\^*\/\+-])(\s+)?(\d+(\.\d+)?)/' required
+                   placeholder='enter expression'/> <span class="glyphicon glyphicon-ok form-control-feedback"
+                                                          ng-class="{true:'glyphicon-ok', false:'glyphicon-remove'}[evtForm.$valid]"></span>
 
             <div class='alert alert-danger' ng-show='!evtForm.$valid'>Invalid Expression!</div>
         </div>
         <div class='form-group' ng-show='evtForm.$valid'>
             <label class='control-label'>Result</label>
+
             <div class='alert alert-info'>{{result}}</div>
         </div>
         <div class='form-group' ng-show='steps'>
@@ -28,6 +35,7 @@
         </div>
     </form>
 </div>
-
+<script src="components/angular/angular.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

@@ -5,13 +5,14 @@
     "Alan Soares <alans@olympic.co.nz>"
   ],
   "description": "Angular component for evaluating arithmetic expressions",
-  "main": "src/index.js",
+  "main": "src/app.js",
   "license": "MIT",
   "private": true,
+  "directory" : "src/components",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
+    "src/components",
     "test",
     "tests"
   ],
